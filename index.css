@@ -1,0 +1,215 @@
+body {
+  background: #1c0234;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0; 
+  font-family: sans-serif;
+ 
+}
+
+fieldset {
+  border: 2px solid #00f7ff;
+  border-radius: 10px;
+  padding: 55px; 
+  box-shadow: 0 0 10px #00f7ff, 
+              0 0 20px #00f7ff, 
+              inset 0 0 10px #00f7ff;
+  text-align: center;
+  background-color: rgba(32, 5, 23, 0.9); 
+  font-weight: bold;
+  
+}
+
+input {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 20px; 
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background: #00f7ff;
+  color: rgb(227, 29, 29); 
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00f7ff;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 25px #00f7ff;
+}
+
+img {
+  border-radius: 40px;
+  display: block;
+  margin: 0 auto 15px auto; 
+}
+ 
+
+input {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 20px; 
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background: #00f7ff;
+  color: rgb(227, 29, 29); 
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00f7ff;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 0 25px #00f7ff;
+  -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+img {
+  border-radius: 40px;
+  display: block;
+  margin: 0 auto 15px auto; 
+}
+
+h1 {
+  background-color: whitesmoke;
+  margin-top: 15%;
+  padding: 10px; 
+  border: 2px solid #fff; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff; 
+  text-align: center;
+  color: #0b0f7f; 
+  background: linear-gradient(to bottom, whitesmoke 0%, #d1d1d1 100%);
+  background: linear-gradient(135deg, #00f7ff 50%, #80fbff 50%);
+ 
+}
+
+ a {
+  display: block;          
+  margin-top: 25px;       
+  color: #584141;             
+  text-decoration: none;   
+  font-size: 1.3rem;        
+  transition: 0.3s ease;   
+  text-shadow: 0 0 8px #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 20px;       
+  border: 1px solid transparent; 
+}
+
+a:hover {
+  color: #00f7ff;
+  text-shadow: 0 0 15px #00f7ff, 0 0 25px #00f7ff;
+  background: rgba(0, 247, 255, 0.1); 
+  transform: scale(1.1);   
+  -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+/* --- Lógica y Estilo del Menú Hamburguesa --- */
+
+/* Escondemos el checkbox real */
+.menu-toggle {
+  display: none;
+}
+
+/* Estilo del botón (las 3 rayitas) */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1000; /* Asegura que esté por encima de todo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #00f7ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00f7ff;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+/* Contenedor del Menú (el panel lateral) */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Escondido a la derecha */
+  width: 250px;
+  height: 100vh;
+  background: rgba(28, 2, 52, 0.95); /* Tu color de fondo */
+  border-left: 2px solid #00f7ff;
+  box-shadow: -10px 0 20px rgba(0, 247, 255, 0.2);
+  transition: 0.5s ease-in-out;
+  padding-top: 80px;
+  z-index: 999;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Reutilizando tus estilos de enlaces 'a' para el menú */
+.nav-menu ul li a {
+  display: block;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 247, 255, 0.1);
+}
+
+
+
+
+.menu-toggle:checked ~ .nav-menu {
+  right: 0;
+}
+
+
+.menu-toggle:checked ~ .hamburger span:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0; 
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
